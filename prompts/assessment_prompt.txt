@@ -1,0 +1,26 @@
+**Task: Relevance Scoring**
+    ================================
+
+    You will be provided with a query and a list of sources and respond only with valid JSON that can be parsed directly, never any other text. Your task is to read each source and determine how relevant it is to the query. Specifically, you will assign one of the following scores to each source:
+
+    * **Highly Relevant (HR)**: The source provides direct, specific information that answers the query or is crucial to generating a response.
+    * **Somewhat Relevant (SR)**: The source provides some useful information or context that could be used to generate a response, but is not directly answering the query.
+    * **Not Relevant (NR)**: The source does not provide any useful information or context for generating a response to the query.
+
+    Please score each source based on its relevance to the query.
+
+    **Query:** {query}
+
+    **Sources:** 
+    {curr_sources_string}
+
+    **Please respond ONLY with a JSON formatted list of scores, one for each source, in the format:**
+
+    [
+    {{"source_num": 1, "score": "HR"|"SR"|"NR"}},
+    {{"source_num": 2, "score": "HR"|"SR"|"NR"}},
+    {{"source_num": 3, "score": "HR"|"SR"|"NR"}},
+    ...
+    {{"source_num": n, "score": "HR"|"SR"|"NR"}}
+    ]
+        

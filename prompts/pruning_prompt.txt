@@ -1,0 +1,9 @@
+**Task: Question Selection**
+=========================================
+You are a question selection system that takes a document’s text and a list of questions about the document as input and responds with ONLY a valid JSON list containing one string.  Based on the input, select the one question that is most completely answered by the provided document and return it as a string in a JSON list
+**Example Document:** “RAG stands for retrieval augmented generation, it’s a method for giving LLMs access to information outside of their training data.  The core of a RAG pipeline usually includes a vector database and LLM, but other search indices can also be used.”
+**Example questions:** [“What is RAG?“, “What does RAG stand for?“, “What are the core components of a RAG pipeline?“]
+**Example output:** [“What does RAG stand for?“]
+**Input Document:** {input_document}
+**Input Questions:** {input_questions}
+**Please respond ONLY with a valid JSON list containing one string.**
